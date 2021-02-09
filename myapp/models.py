@@ -7,6 +7,9 @@ from django.contrib.contenttypes.models import ContentType
 
 
 class MyAppModel(models.Model):
+    class Meta:
+        db_table = 'bd_big_brother'
+
     uuid = models.UUIDField(
         default=uuid.uuid4, editable=False, null=True, unique=True,
     )
